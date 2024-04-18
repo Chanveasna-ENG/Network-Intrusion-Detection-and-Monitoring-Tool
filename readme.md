@@ -13,7 +13,7 @@ This project uses a packet sniffer and a pre-trained BERT model to monitor and c
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/yourrepository.git
+git clone https://github.com/Chanveasna-ENG/Network-Intrusion-Detection-and-Monitoring-Tool.git
 ```
 
 Install the required packages:
@@ -26,15 +26,24 @@ pip install -r requirements.txt
 
 Run the main script to start the packet sniffer and AI prediction model (make sure to run as root or administrator):
 
+![Packet Sniffer](Screenshots/Sniffer.png)
+
 ```bash
 python main.py
 ```
 
 Run and Open the dashboard in a web browser:
 
+![Dashboard](Screenshots/Dashboard.png)
+
 ```bash
 streamlit run Dashboard_v2.py
 ```
+
+### Screenshots of the other pages of the dashboard
+
+![Unique Addresses](Screenshots/Unique_Addresses.png)
+![Log](Screenshots/Log.png)
 
 ### Libraries Used
 
