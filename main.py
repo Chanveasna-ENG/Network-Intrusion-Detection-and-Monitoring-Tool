@@ -51,7 +51,8 @@ def get_domain_name(ip):
 
 
 def count_blocks_in_last_hour(ip):
-    log_df = pd.read_csv('log_data/log.csv')
+    log_file_path = os.path.join(SCRIPT_DIR, 'log_data/log.csv')
+    log_df = pd.read_csv(log_file_path)
 
     # Filter the rows where the source IP is the given IP and the status is 'BLOCK'
     ip_blocks = log_df[(log_df['source_ip'] == ip) &
@@ -68,7 +69,7 @@ def count_blocks_in_last_hour(ip):
     return len(ip_blocks_last_hour)
 
 
-def backend():
+def main():
     packet_sniffer = PacketSniffer()
     network_detection = NetworkDetectionModel()
 
@@ -168,4 +169,4 @@ def backend():
 
 
 if __name__ == "__main__":
-    backend()
+    main()
